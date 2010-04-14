@@ -1,0 +1,25 @@
+
+.span-14.blogEntry.form
+  %p.slugOrigin
+    = f.label :title, 'Name'
+    %br
+    = f.text_field :title, :class => 'span-14 text'
+
+  = render_partial_from_theme "documents/shared/slug_field", :locals => {:f => f, :document => document}
+
+  %p
+    %h4= 'Image'
+    %br
+    = f.text_field :content, :class => 'span-14 text'
+  
+  %p
+    %h4= 'Role'
+    %br
+    = f.text_field :summary, :class => 'span-14 text'
+
+  = form_revision_comment(f, document)
+
+  %h3 Advanced Options
+  .advancedOptions
+    = form_advanced_options(f, document, :locale, :user)
+    = form_revision_history(f, document)

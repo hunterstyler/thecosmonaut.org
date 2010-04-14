@@ -1,7 +1,12 @@
+
 %article.page.home.span-24{:id => "document_#{document.id}"}
   %header
     = document_actions
 
+  .destacado{:style => "background-image:url(http://elcosmonauta.es/imagenes/cosmonautaGeddes.jpg); background-repeat: no-repeat; background-position: top right;"}
+    %h2 @title
+
+  
   .span-24.topIntroduction
     .background &nbsp;
 

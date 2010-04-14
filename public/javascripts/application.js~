@@ -131,10 +131,10 @@ $.stdDialog = {
       $('#dialog').html(contents);
       $('#dialog form .markItUp').markItUp(mySettings);
       $('#dialog input:visible:first').focus();
-      //if ($('.documentFormAction').parents().find('#summaryActions')) 
-        //$('#markItUpDocument_content').hide(); 
-      //else
-        //$('#markItUpDocument_summary').hide();
+      if ($('.documentFormAction').parents().find('#summaryActions')) 
+        $('#markItUpDocument_content').hide(); 
+      else
+        $('#markItUpDocument_summary').hide();
    } else {
       return $('#dialog').html();
     }

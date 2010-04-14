@@ -1,0 +1,12 @@
+%article.collectionItem.span-14{:class => document.published? ? 'published' : 'notPublished', :id => "document_#{document.id}"}
+  .content
+    :textile
+      !#{textile_wiki_filter(document.content)}!
+  .title
+    :textile
+      *#{textile_wiki_filter(document.title)}*
+  %p.summary
+    :textile
+      dfsgdfgdf
+
+  = document_actions document, :draggable => true 

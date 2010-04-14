@@ -1,0 +1,12 @@
+%article.collectionItem.item{:class => (document.published? ? 'published' : 'notPublished') + (((document.position != 0) and (document.position%5 == 0)) ? ' last' : ''), :id => "document_#{document.id}"}
+  .image
+    :textile	
+      !#{textile_wiki_filter(document.content)}!
+  .details
+    .name
+      :textile	
+        #{textile_wiki_filter(' ' + document.title)}
+    .role
+      :textile
+        #{textile_wiki_filter(document.summary)}
+  = document_actions document, :draggable => true 

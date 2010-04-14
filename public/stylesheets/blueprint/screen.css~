@@ -196,7 +196,7 @@ input.span-24, textarea.span-24 {width:832px!important;}
 .prepend-22 {padding-left:792px;}
 .prepend-23 {padding-left:828px;}
 div.border, section.border, nav.border, article.border, aside.border, header.border, footer.border {padding-right:9px;margin-right:10px;border-right:1px solid #eee;}
-div.colborder, section.colborder, nav.colborder, article.colborder, aside.colborder, header.colborder, footer.colborder {padding-right:27px;margin-right:28px;border-right:1px solid #eee;}
+div.colborder, section.colborder, nav.colborder, article.colborder, aside.colborder, header.colborder, footer.colborder {padding-right:5px;margin-right:6px;border-right:1px solid #eee;}
 .pull-1 {margin-left:-36px;}
 .pull-2 {margin-left:-72px;}
 .pull-3 {margin-left:-108px;}

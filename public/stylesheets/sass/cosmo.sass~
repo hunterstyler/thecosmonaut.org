@@ -3,17 +3,17 @@
   a
     color: #0099cc
     
-  p, ul, ol, blockquote, table
-    color: #555B56
-    line-height: 150%
-
   .destacado
     h2
       font-size:21px;
       font-weight:bold;
     background-color: #fff
     padding: 25px
+
+  p, ul, ol, blockquote, table
+    color: #555B56
     font-size: 15px
+    line-height: 150%
 
   .page.home
     .topIntroduction
@@ -57,20 +57,19 @@
           a
             font-size: 13px
             color: #666666
-  .pages.support
+  .pages.home
     .withHelp, .followProject
-      padding-bottom: 20px
-      padding-top: 0px
+      border-bottom: 1px solid #6C736D
+      padding-bottom: 10px
+      padding-top: 40px
       h2
         color: #6C736D
+        font-size: 12px
         font-weight: bold
         line-height: 15px
         margin-bottom: 0
         text-transform: uppercase
-        font-size: 12px
-
-      .item
-        font-size: 12px
+      .signature
         float: left
         height: 155px
         margin-right: 20px
@@ -81,7 +80,6 @@
             display: block
           .name
             font-weight: bold
-          .role
         .image
           height: 90px
           position: relative
@@ -89,41 +87,15 @@
             bottom: 0
             left: 0
             position: absolute
-      .item.last
+      .signature.last
         margin-right: 0
       .logo
         float: left
         margin-right: 40px
         margin-top: 20px
 
-  .pages.team
-    .withHelp, .followProject
-      padding-bottom: 20px
-      padding-top: 0px
-
-      .item
-        font-size: 14px
-        line-height: 130%
-        float: left
-        padding: 0 10px 0 0
-        margin-right: 20px
-        width: 232px
-        height: 55px
-        .details
-          padding-right: 0
-          padding-left: 35px
-          .name
-          .role
-            color: #666666
-            font-size: 12px
-        .image
-          height: 35px
-          position: absolute
-          img
-            top: 5px
-            left: 5px
-            position: absolute
-
-
-
-
+.summary
+  p, ul, ol, blockquote, table
+    color: #555B56
+    font-size: 15px
+    line-height: 150%

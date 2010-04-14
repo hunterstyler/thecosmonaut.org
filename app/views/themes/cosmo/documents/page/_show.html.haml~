@@ -3,7 +3,9 @@
 
 - else
   .destacado{:style => "background-image: url(http://elcosmonauta.es/imagenes/cosmonautaGeddes.jpg); background-repeat: no-repeat; background-position: top right;"}
-      
+    %header#summaryActions
+      = document_actions
+    
     %h2
       = @document.title
       

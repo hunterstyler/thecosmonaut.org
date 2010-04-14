@@ -39,3 +39,5 @@
       -# Special form for sorting documents
       - form_tag sort_documents_url, :id => 'sortDocumentsForm' do
         = hidden_field_tag 'event', 'sort'
+    %h2{:style => "font-size: 21px; font-weight: bold;"}
+

@@ -1,0 +1,72 @@
+.destacado{:style => "background-image: url(http://elcosmonauta.es/imagenes/cosmonautaGeddes.jpg); background-repeat: no-repeat; background-position: top right;"}
+
+  %h2
+    = @document.title
+
+  %header#Actions
+    = document_actions
+
+  :textile
+    #{textile_wiki_filter(@document.summary)}
+
+
+%article.page.span-24{:id => "document_#{document.id}"}
+  .content.span-24
+
+    %header.contentActions
+      = document_actions
+    %br
+    :textile
+      #{textile_wiki_filter(@document.content)}
+
+- if document.slug == 'equipo'
+  .normal
+    %article.collection.span-24{:id => "document_#{document.id}"}
+      .pages.team
+        .span-24.withHelp
+          %section.span-24 
+            = document_add_child(@document, :layout => 'collection_item', :title => "Create a new item")
+            .items.sortable
+              - base = @document.children.layout_is('collection_item').for_current_locale.ordered
+              - base = base.published.not_hidden unless current_user_is_editor?
+              - base.each do |entry|
+                = render_document(entry)
+
+- if document.slug == 'team'
+  .normal
+    %article.collection.span-24{:id => "document_#{document.id}"}
+      .pages.team
+        .span-24.withHelp
+          %section.span-24 
+            = document_add_child(@document, :layout => 'collection_item', :title => "Create a new item")
+            .items.sortable
+              - base = @document.children.layout_is('collection_item').for_current_locale.ordered
+              - base = base.published.not_hidden unless current_user_is_editor?
+              - base.each do |entry|
+                = render_document(entry)
+
+- if document.slug == 'apoyos'
+  .normal
+    %article.collection.span-24{:id => "document_#{document.id}"}
+      .pages.support
+        .span-24.withHelp
+          %section.span-24 
+            = document_add_child(@document, :layout => 'collection_item', :title => "Create a new item")
+            .items.sortable
+              - base = @document.children.layout_is('collection_item').for_current_locale.ordered
+              - base = base.published.not_hidden unless current_user_is_editor?
+              - base.each do |entry|
+                = render_document(entry)
+
+- if document.slug == 'supports'
+  .normal
+    %article.collection.span-24{:id => "document_#{document.id}"}
+      .pages.support
+        .span-24.withHelp
+          %section.span-24 
+            = document_add_child(@document, :layout => 'collection_item', :title => "Create a new item")
+            .items.sortable
+              - base = @document.children.layout_is('collection_item').for_current_locale.ordered
+              - base = base.published.not_hidden unless current_user_is_editor?
+              - base.each do |entry|
+                = render_document(entry)

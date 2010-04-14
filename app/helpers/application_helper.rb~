@@ -53,20 +53,6 @@ module ApplicationHelper
     options.reverse_merge!(:document => document, :force => false, :draggable => false)
     render :partial => 'documents/actions', :locals => options
   end
-  
-    # Render the document actions partial and set a few defaults in preparation.
-  # Actions will only be shown if the user is logged in and has permissions.
-  #
-  # Options include:
-  #   :force => Boolean; When true, always show the actions, otherwise only show if its the active document or child of
-  #   :draggable => boolean; show the drag handle
-  #
-  def document_actions_summary(document = nil, options = {})
-    return unless current_user_is_editor?
-    document ||= @document
-    options.reverse_merge!(:document => document, :force => false, :draggable => false)
-    render :partial => 'documents/actions_summary', :locals => options
-  end
 
   #
   # Provide an action for adding new child documents. Will only 

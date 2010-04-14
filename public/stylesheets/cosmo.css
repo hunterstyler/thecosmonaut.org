@@ -1,13 +1,16 @@
-#content a {
+.content a {
   color: #0099cc; }
-#content p, #content ul, #content ol, #content blockquote, #content table {
+.content p, .content ul, .content ol, .content blockquote, .content table {
   color: #555B56;
-  font-size: 17px;
   line-height: 150%; }
-#content .page.home .topIntroduction {
+.content .destacado {
+  background-color: #fff;
+  padding: 25px;
+  font-size: 15px; }
+.content .page.home .topIntroduction {
   position: relative;
   height: 300px; }
-  #content .page.home .topIntroduction .background {
+  .content .page.home .topIntroduction .background {
     position: absolute;
     z-index: -10;
     top: -4px;
@@ -15,31 +18,90 @@
     width: 855px;
     height: 309px;
     background: url('/images/backgrounds/top_introduction.png') 0 0 no-repeat; }
-  #content .page.home .topIntroduction .photos, #content .page.home .topIntroduction .info {
+  .content .page.home .topIntroduction .photos, .content .page.home .topIntroduction .info {
     height: 300px; }
-  #content .page.home .topIntroduction .photos img {
+  .content .page.home .topIntroduction .photos img {
     position: absolute;
     top: -10px;
     left: -10px; }
-  #content .page.home .topIntroduction .info h1 {
+  .content .page.home .topIntroduction .info h1 {
     margin-top: 30px;
     background: url('/images/home_elcosmonauta.png') 0 0 no-repeat;
     width: 330px;
     height: 63px; }
-    #content .page.home .topIntroduction .info h1 span {
+    .content .page.home .topIntroduction .info h1 span {
       display: none; }
-  #content .page.home .topIntroduction .info h2 {
+  .content .page.home .topIntroduction .info h2 {
     display: none; }
-  #content .page.home .topIntroduction .info ul {
+  .content .page.home .topIntroduction .info ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-  #content .page.home .topIntroduction .info li {
+  .content .page.home .topIntroduction .info li {
     margin: 0;
     padding: 0;
     float: left;
     width: 170px;
     height: 25px; }
-    #content .page.home .topIntroduction .info li a {
+    .content .page.home .topIntroduction .info li a {
       font-size: 13px;
       color: #666666; }
+.content .pages.support .withHelp, .content .pages.support .followProject {
+  padding-bottom: 20px;
+  padding-top: 0px; }
+  .content .pages.support .withHelp h2, .content .pages.support .followProject h2 {
+    color: #6C736D;
+    font-weight: bold;
+    line-height: 15px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 12px; }
+  .content .pages.support .withHelp .item, .content .pages.support .followProject .item {
+    font-size: 12px;
+    float: left;
+    height: 155px;
+    margin-right: 20px;
+    width: 150px; }
+    .content .pages.support .withHelp .item .details, .content .pages.support .followProject .item .details {
+      padding-right: 0; }
+      .content .pages.support .withHelp .item .details span, .content .pages.support .followProject .item .details span {
+        display: block; }
+      .content .pages.support .withHelp .item .details .name, .content .pages.support .followProject .item .details .name {
+        font-weight: bold; }
+    .content .pages.support .withHelp .item .image, .content .pages.support .followProject .item .image {
+      height: 90px;
+      position: relative; }
+      .content .pages.support .withHelp .item .image img, .content .pages.support .followProject .item .image img {
+        bottom: 0;
+        left: 0;
+        position: absolute; }
+  .content .pages.support .withHelp .item.last, .content .pages.support .followProject .item.last {
+    margin-right: 0; }
+  .content .pages.support .withHelp .logo, .content .pages.support .followProject .logo {
+    float: left;
+    margin-right: 40px;
+    margin-top: 20px; }
+.content .pages.team .withHelp, .content .pages.team .followProject {
+  padding-bottom: 20px;
+  padding-top: 0px; }
+  .content .pages.team .withHelp .item, .content .pages.team .followProject .item {
+    font-size: 14px;
+    line-height: 130%;
+    float: left;
+    padding: 0 10px 0 0;
+    margin-right: 20px;
+    width: 232px;
+    height: 55px; }
+    .content .pages.team .withHelp .item .details, .content .pages.team .followProject .item .details {
+      padding-right: 0;
+      padding-left: 35px; }
+      .content .pages.team .withHelp .item .details .role, .content .pages.team .followProject .item .details .role {
+        color: #666666;
+        font-size: 12px; }
+    .content .pages.team .withHelp .item .image, .content .pages.team .followProject .item .image {
+      height: 35px;
+      position: absolute; }
+      .content .pages.team .withHelp .item .image img, .content .pages.team .followProject .item .image img {
+        top: 5px;
+        left: 5px;
+        position: absolute; }

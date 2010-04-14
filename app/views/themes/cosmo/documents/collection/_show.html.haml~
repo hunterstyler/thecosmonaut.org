@@ -1,0 +1,24 @@
+.destacado{:style => "background-image: url(http://elcosmonauta.es/imagenes/cosmonautaGeddes.jpg); background-repeat: no-repeat; background-position: top right;"}
+
+  %h2
+    = @document.title
+
+  %header#Actions
+    = document_actions
+
+  :textile
+    #{textile_wiki_filter(@document.summary)}
+
+%article.page.span-24{:id => "document_#{document.id}"}
+  %section.span-14
+    = document_add_child(@document, :layout => 'collection_item', :title => "Create a new item")
+
+    .items.sortable
+      - base = @document.children.layout_is('collection_item').for_current_locale.ordered
+      - base = base.published.not_hidden unless current_user_is_editor?
+      - @entries = paginate_documents(base)
+      - @entries.each do |entry|
+        = render_document(entry)
+
+    = will_paginate @entries
+
